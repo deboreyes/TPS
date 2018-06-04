@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Memotest</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  	<div class="container">
+		<section id="new">
+			<img src="imgs/logo.png" id="logo">
+			<input type="text" placeholder="Nombre" id="name" autocomplete="off">
+			<select name="level" id="selectLevel">
+				<option value="0">Seleccione un nivel</option>
+				<option value="18">Fácil</option>
+				<option value="12">Intermedio</option>
+				<option value="8">Experto</option>
+			</select>
+			<button id="newGameBtn">JUGAR</button>
+		</section>
+		<section id="gameContainer">
+			<section class="data">
+				<div>
+					<label>INTENTOS</label>
+				  	<label id="round"> </label>
+				</div>
+				<div>
+					<Label>PUNTOS</Label>
+					<label id="score"></label>
+				</div>
+				<button id="resetGameBtn" >REINICIAR</button>
+			</section>	
+  			<section id="game">
+			</section>	
+		</section>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
+
