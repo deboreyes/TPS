@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	.favsContainer
+		.head
+			h2 Mis Favoritos
+			a(href="/")
+				img#close(src="/images/close.png", alt="salir")
+		.imgsContainer
+			if result.message
+				.message
+					h2=result.message
+			else
+				for img in result.imgsArray
+					figure
+						a(href="/dog/"+img.id)
+							img(src="/images/"+img.src+".jpg", alt="perro")
+						figcaption
+							if (img.fav==true)
+								.fav.heart(id=img.id)
+							else
+								.heart(id=img.id)
+							a(href="/dog/"+img.id)
+								img.glass(src="/images/glass.png", alt="ver")
+							label#name #{img.name}
+							label Raza: #{img.breed}
+							label Tamaño: #{img.size}
+							label Edad: #{img.age}							
+				.pagination
+					ul
+						span#prev
+							li="<"
+						-for (var i=1; i<=totalFav; i++)
+							li
+								a.pages(href="/favorites/"+i id="page"+i)=i
+						span#next
+							li=">"
