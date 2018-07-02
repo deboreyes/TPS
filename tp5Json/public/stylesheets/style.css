@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  color:#696969;
+  font-size: 14px;
+}
+
+.mainContainer{
+  display: flex;
+}
+
+a{
+ text-decoration: none;
+}
+
+/*------------------------- header------------------- */
+header{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 130px;
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+  overflow: hidden;
+  text-align: center;
+}
+
+.logo{
+  width: 100px;
+}
+
+#home{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+}
+
+h1{
+  font-size: 28px;
+}
+
+/*------------------------- form------------------- */
+
+.formContainer{
+  width: 300px;
+  padding:10px;
+}
+
+form{
+  width: 200px;
+  padding: 10px;
+}
+
+input,select{
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  border:1px solid #3E4649;
+  outline:none;
+}
+
+input,#favorites{
+  background-color: #3E4649;
+  color:white;
+  text-align: center;
+  line-height: 30px;
+}
+
+form label{
+  padding: 2px;
+}
+
+#favorites{
+  margin-left: 10px;
+  padding:7px 58px;
+  cursor: default;
+
+}
+
+/* ---------------------------imgsContainer------------------------ */
+.imgsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px 5px 0 5px;
+}
+
+figure{
+  width: 250px;
+  height: 430px;
+}
+
+figure img{
+  width: 100%;
+}
+
+figcaption{
+ display: flex;
+ flex-wrap: wrap;
+}
+
+figcaption label{
+  width: 100%;
+  padding: 2px;
+  font-size: 13px;
+}
+
+#name{
+  text-transform: uppercase;
+}
+
+.heart{
+  width: 25px;
+  height: 25px;
+  background-image: url("/images/heart.png");
+  background-size: 100%; 
+}
+
+.fav{
+  background-image: url("/images/heartFav.png");
+}
+
+.glass{
+  width: 32px;
+  height: 32px;
+}
+
+/*------------------------- paginacion------------------- */
+.pagination{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.pagination ul{
+  display:flex;
+  list-style-type: none;
+}
+
+.pages{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center; 
+}
+
+.pagination a.active{
+  background-color:#4c4c4c;
+  border-radius: 50%;
+  color: #fff;
+}
+
+span{
+  width: 30px;
+  height: 30px;
+  text-align: center; 
+  line-height: 30px;
+  cursor: pointer;
+}
+
+
+
+/*------------------------- favoritos------------------- */
+.head{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding:20px;
+}
+
+#close{
+  width: 30px;
+  height: 30px;
+  align-self: flex-start;
+}
+
+/*------------------------- error------------------- */
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+h2{
+  text-align: center;
+  font-size: 25px;
+}
+/*------------------------- dog------------------- */
+#main{
+  display: flex;
+  justify-content: center;
+  padding:30px;
+  line-height: 30px;
+}
+
+#dog{
+  width: 300px;
+  height: 350px;
+}
+
+#description{
+  width: 50%;
+}
+
+#details{
+  display: flex;
+  flex-wrap: wrap;
+  height: 150px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#dogname{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px; 
+}
+
+#description label{
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .mainContainer{
+    flex-wrap: wrap;
+  }
+
+  #favContainer{
+    width: 100%;
+  }
+
+  .formContainer{
+    width:100%;
+  }
+
+  .pages{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
+

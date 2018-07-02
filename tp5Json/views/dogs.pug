@@ -1,0 +1,47 @@
+extends layout
+
+block content
+	.mainContainer
+		.formContainer
+			form(action="/filter" method="POST")
+				label RAZA
+					select(name="breed")
+						for breed in result.breeds
+							option(value=breed) #{breed}
+				label TAMAÑO
+					select(name="size")
+						for size in result.sizes
+							option(value=size) #{size}
+				label EDAD
+					select(name="age")
+						for age in result.ages
+							option(value=age) #{age}
+				input(type="submit" value="FILTRAR")
+				input#clean(type="reset" value="QUITAR FILTRO")
+			a#favorites(href="/favorites/") FAVORITOS
+		.imgsContainer
+			for img in result.imgsArray
+				figure(id=img.id)
+					a(href="/dog/"+img.id)
+						img.dogImg(src="/images/"+img.src+".jpg", alt="")
+					figcaption
+						if (img.fav==true)
+							.fav.heart
+						else
+							.heart
+						a(href="/dog/"+img.id)
+							img(src="/images/glass.png", alt="").glass
+						label#name #{img.name}
+						label Raza: #{img.breed}
+						label Tamaño: #{img.size}
+						label Edad: #{img.age}
+						
+			.pagination
+				ul
+					span#prev
+						li="<"
+					-for (var i=1; i<=result.total; i++)
+						li
+							a.pages(href="/all/"+i id="page"+i)=i
+					span#next
+						li=">"
